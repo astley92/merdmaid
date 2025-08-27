@@ -1,0 +1,20 @@
+name: "Merdmaid"
+description: "Ensure your documented ERD matches your database schema"
+author: "astley92"
+inputs:
+  openai_api_key:
+    description: "OpenAI API key"
+    required: true
+  model:
+    description: "OpenAI model (e.g. gpt-4o-mini)"
+    default: "gpt-4o-mini"
+  output_path:
+    description: "Where the ERD should live"
+    default: "docs/erd.md"
+  schema_globs:
+    description: "Comma-separated globs for schema-like files"
+    default: "db/schema.rb,**/schema.rb"
+runs:
+  using: "node20"
+  main: "dist/index.js"
+

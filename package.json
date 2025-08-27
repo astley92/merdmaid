@@ -1,0 +1,19 @@
+{
+  "name": "merdmaid",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "ncc build src/index.ts -o dist"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0",
+    "globby": "^14.0.2",
+    "undici": "^7.15.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@vercel/ncc": "^0.38.1",
+    "typescript": "^5.4.0"
+  }
+}
